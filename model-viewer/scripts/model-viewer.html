@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script src="watermark-protection.js" defer></script>
+    
+    <style>
+       
+            
+
+        .model-wrapper {
+            position: relative; 
+            width: 400px; 
+            height: 400px;
+            border: 1px solid #ccc;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 0;
+            left: 182px;
+           /* width: 100%;*/
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            /*background: rgba(255, 255, 255, 0.7);  Semi-transparent strip */
+            padding: 6px 16px;
+        
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="model-wrapper" id="model-container">
+        <!-- Use it like any other HTML element -->
+        <model-viewer id="myModel" alt="blah blah blah" src="../assets/model/table.glb" ar environment-image="../assets/environment/moon_1k.hdr" poster="../assets/image/table.png" shadow-intensity="1" camera-controls touch-action="pan-y" camera-controls loading="eager" preload="auto" ar></model-viewer>
+        <!-- Watermark will be inserted by JavaScript -->
+    </div>
+
+    
+</body>
+</html>
